@@ -19,6 +19,23 @@
       "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
       "status": "official",
       "submittedAt": "2026-02-28"
+    },
+    {
+      "id": "sat-lotto-v2",
+      "name": "SatLotto V2",
+      "description": "Juego simple y elegante que usa NWC y LN. Proba tu suerte cada 21 bloques",
+      "team": [
+        {
+          "name": "Fierillo ",
+          "github": "Fierillo",
+          "role": "Lead Dev"
+        }
+      ],
+      "repo": "https://github.com/Fierillo/sat-lotto-v2",
+      "demo": "",
+      "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
+      "status": "building",
+      "submittedAt": "2026-03-06"
     }
   ],
   "_instructions": {
