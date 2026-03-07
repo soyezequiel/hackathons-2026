@@ -52,6 +52,38 @@
       "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
       "status": "building",
       "submittedAt": "2026-03-06"
+    },
+    {
+      "id": "bitbybit-habits",
+      "name": "BitByBit",
+      "description": "Habit tracker que recompensa completar tareas con sats reales via Lightning. MVP: Mesada 2.0 donde sponsors crean habitos con recompensa en sats y kids los completan para ganar.",
+      "team": [
+        {
+          "name": "Anix",
+          "github": "analiaacostaok",
+          "role": "Lead Dev"
+        },
+        {
+          "name": "Llopo",
+          "github": "fabricio333",
+          "role": "Dev"
+        },
+        {
+          "name": "Wander",
+          "github": "Pizza-Wder",
+          "role": "Dev"
+        },
+        {
+          "name": "Leon",
+          "github": "leonacostaok",
+          "role": "PM"
+        }
+      ],
+      "repo": "https://github.com/bitbybit-ar/bitbybit-habits",
+      "demo": "https://bitbybit.com.ar",
+      "tech": ["Next.js", "React", "TypeScript", "NWC", "Alby SDK", "Neon DB", "SCSS"],
+      "status": "building",
+      "submittedAt": "2026-03-07"
     }
   ],
   "_instructions": {
