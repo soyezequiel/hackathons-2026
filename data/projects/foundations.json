@@ -165,6 +165,23 @@
       "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
       "status": "building",
       "submittedAt": "2026-03-08"
+    },
+    {
+      "id": "stacktris",
+      "name": "Stacktris",
+      "description": "Battle Tetris multijugador con una capa de apuestas en Bitcoin Lightning Network.",
+      "team": [
+        {
+          "name": "landaverdend",
+          "github": "landaverdend",
+          "role": "Lead Dev"
+        }
+      ],
+      "repo": "https://github.com/landaverdend/stacktris",
+      "demo": "",
+      "tech": ["React", "TypeScript", "Node.js", "Express", "WebSockets", "Vite"],
+      "status": "building",
+      "submittedAt": "2026-03-09"
     }
   ],
   "_instructions": {
