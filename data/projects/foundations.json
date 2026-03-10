@@ -165,6 +165,23 @@
       "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
       "status": "building",
       "submittedAt": "2026-03-08"
+    },
+    {
+      "id": "relam-pago",
+      "name": "RelámPago",
+      "description": "RelámPago es una app web (PWA) pensada para comerciantes y emprendedores de LATAM que quieren recibir pagos con LN — sin necesidad de saber nada técnico.",
+      "team": [
+        {
+          "name": "Burgos",
+          "github": "Burgos247",
+          "role": "Lead Dev"
+        }
+      ],
+      "repo": "https://github.com/Burgos247/RelamPago/",
+      "demo": "https://relam-pago.vercel.app/",
+      "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
+      "status": "building",
+      "submittedAt": "2026-03-10"
     }
   ],
   "_instructions": {
