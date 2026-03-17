@@ -472,6 +472,26 @@
 <!-- CTA -->
 
 <!-- Calendario -->
+<section class="projects-section" id="proyectos">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Proyectos</span>
+      <h2 class="section-title">Participando en FOUNDATIONS</h2>
+      <p class="section-description">
+        Proyectos inscriptos en esta hackathon. 
+        <a href="https://github.com/lacrypta/hackathons-2026/blob/main/data/projects/foundations.json" target="_blank" class="add-project-link">
+          ¿Querés agregar el tuyo? Hacé un PR →
+        </a>
+      </p>
+    </div>
+    
+    <div class="projects-grid" id="projectsGrid">
+      <!-- Proyectos se cargan dinámicamente desde /data/projects/foundations.json -->
+      <div class="loading-projects">Cargando proyectos...</div>
+    </div>
+  </div>
+</section>
+
 <section class="calendar-section" id="calendario">
   <div class="container">
     <div class="section-header">
@@ -566,7 +586,6 @@
   </div>
 </section>
 
-<!-- Topics -->
 <section class="topics-section">
   <div class="container">
     <div class="section-header">
@@ -595,26 +614,6 @@
   </div>
 </section>
 
-<!-- Proyectos Participando -->
-<section class="projects-section" id="proyectos">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Proyectos</span>
-      <h2 class="section-title">Participando en FOUNDATIONS</h2>
-      <p class="section-description">
-        Proyectos inscriptos en esta hackathon. 
-        <a href="https://github.com/lacrypta/hackathons-2026/blob/main/data/projects/foundations.json" target="_blank" class="add-project-link">
-          ¿Querés agregar el tuyo? Hacé un PR →
-        </a>
-      </p>
-    </div>
-    
-    <div class="projects-grid" id="projectsGrid">
-      <!-- Proyectos se cargan dinámicamente desde /data/projects/foundations.json -->
-      <div class="loading-projects">Cargando proyectos...</div>
-    </div>
-  </div>
-</section>
 
 <script>
 async function loadProjects() {
