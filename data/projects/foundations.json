@@ -326,6 +326,20 @@
       ],
       "status": "building",
       "submittedAt": "2026-03-17"
+    },
+    {
+      "id": "openwork",
+      "name": "openWork",
+      "description": "establece un contrato entre un agente con otro agente para que uno haga un trabajo para el otro contra una contraprestacion usando satoshis de LN",
+      "team": [
+        {
+          "name": "naranja",
+          "github": "soyezequiel",
+          "role": "Lead Dev"
+        }
+      ],
+      "status": "idea",
+      "submittedAt": "2026-03-17"
     }
   ],
   "_instructions": {
