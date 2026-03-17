@@ -177,7 +177,7 @@
         }
       ],
       "repo": "https://github.com/CapScabio/Anirayo",
-      "demo": "",
+      "demo": "https://github.com/CapScabio/Anirayo",
       "tech": [
         "Web NFC",
         "Alby SDK",
@@ -248,7 +248,7 @@
         }
       ],
       "repo": "https://github.com/Burgos247/RelamPago/",
-      "demo": "https://relam-pago.vercel.app/",
+      "demo": "https://relam-pago.vercel.app",
       "tech": [
         "Alby SDK",
         "NWC",
@@ -271,7 +271,7 @@
         }
       ],
       "repo": "https://github.com/landaverdend/stacktris",
-      "demo": "",
+      "demo": "https://github.com/landaverdend/stacktris",
       "tech": [
         "React",
         "TypeScript",
