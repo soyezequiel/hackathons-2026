@@ -340,7 +340,21 @@
       ],
       "status": "idea",
       "submittedAt": "2026-03-17"
-    }
+    },
+  {
+    "id": "life-action-plan",
+    "name": "Life Action Plan (LAP)",
+    "description": "Asistente personal offline-first que usa IA para crear, simular y refinar planes de vida y rutinas diarias, garantizando privacidad extrema y habilitando micro-pagos por token mediante Lightning Network.",
+    "team": [
+      {
+        "name": "naranja",
+        "github": "soyezequiel",
+        "role": "Lead Dev"
+      }
+    ],
+    "status": "idea",
+    "submittedAt": "2026-03-18"
+  }
   ],
   "_instructions": {
     "howToAdd": "Para agregar tu proyecto, hacé un PR a este archivo agregando tu proyecto al array 'projects'.",
