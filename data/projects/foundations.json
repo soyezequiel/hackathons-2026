@@ -271,7 +271,7 @@
             }
          ],
          "repo":"https://github.com/landaverdend/stacktris",
-         "demo":"https://github.com/landaverdend/stacktris",
+         "demo":"https://stacktris.app/",
          "tech":[
             "React",
             "TypeScript",
