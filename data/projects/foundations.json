@@ -47,7 +47,8 @@
       ],
       "status": "submitted",
       "submittedAt": "2026-03-04",
-      "pitched": "https://www.youtube.com/watch?v=3sXD0EWWEdo&t=2464s"
+      "pitched": "https://www.youtube.com/watch?v=3sXD0EWWEdo&t=2464s",
+      "pitched_final": "https://www.youtube.com/watch?v=W9Fw72-jFX0&t=848s"
     },
     {
       "id": "sat-lotto-v2",
@@ -71,7 +72,8 @@
       ],
       "status": "building",
       "submittedAt": "2026-03-06",
-      "pitched": "https://www.youtube.com/watch?v=3sXD0EWWEdo&t=4903s"
+      "pitched": "https://www.youtube.com/watch?v=3sXD0EWWEdo&t=4903s",
+      "pitched_final": "https://www.youtube.com/watch?v=W9Fw72-jFX0&t=1126s"
     },
     {
       "id": "bitbybit-habits",
@@ -112,7 +114,8 @@
       ],
       "status": "building",
       "submittedAt": "2026-03-07",
-      "pitched": "https://www.youtube.com/watch?v=3sXD0EWWEdo&t=3074s"
+      "pitched": "https://www.youtube.com/watch?v=3sXD0EWWEdo&t=3074s",
+      "pitched_final": "https://www.youtube.com/watch?v=W9Fw72-jFX0&t=1390s"
     },
     {
       "id": "Streamsats",
@@ -163,7 +166,8 @@
         "GitHub Pages"
       ],
       "status": "submitted",
-      "submittedAt": "2026-03-07"
+      "submittedAt": "2026-03-07",
+      "pitched_final": "https://www.youtube.com/watch?v=W9Fw72-jFX0&t=1669s"
     },
     {
       "id": "anirayo",
@@ -185,7 +189,8 @@
         "Vite"
       ],
       "status": "submitted",
-      "submittedAt": "2026-03-08"
+      "submittedAt": "2026-03-08",
+      "pitched_final": "https://www.youtube.com/watch?v=W9Fw72-jFX0&t=2269s"
     },
     {
       "id": "digital-card",
@@ -208,7 +213,8 @@
         "Vite"
       ],
       "status": "building",
-      "submittedAt": "2026-03-08"
+      "submittedAt": "2026-03-08",
+      "pitched_final": "https://www.youtube.com/watch?v=W9Fw72-jFX0&t=2062s"
     },
     {
       "id": "wapu-cli",
@@ -234,7 +240,8 @@
       ],
       "status": "building",
       "submittedAt": "2026-03-10",
-      "pitched": "https://www.youtube.com/watch?v=3sXD0EWWEdo&t=3706s"
+      "pitched": "https://www.youtube.com/watch?v=3sXD0EWWEdo&t=3706s",
+      "pitched_final": "https://www.youtube.com/watch?v=W9Fw72-jFX0&t=3577s"
     },
     {
       "id": "relam-pago",
@@ -281,7 +288,8 @@
         "Vite"
       ],
       "status": "building",
-      "submittedAt": "2026-03-09"
+      "submittedAt": "2026-03-09",
+      "pitched_final": "https://www.youtube.com/watch?v=W9Fw72-jFX0&t=2887s"
     },
     {
       "id": "SatsParty",
@@ -304,7 +312,109 @@
         "Vite"
       ],
       "status": "building",
-      "submittedAt": "2026-03-11"
+      "submittedAt": "2026-03-11",
+      "pitched_final": "https://www.youtube.com/watch?v=W9Fw72-jFX0&t=2583s"
+    },
+    {
+      "id": "beyond-shots",
+      "name": "Beyond Shots",
+      "description": "E-commerce de postres artesanales con pagos Lightning Network. Carrito de compras, sistema de puntos de fidelidad, y cobro directo en sats.",
+      "team": [
+        {
+          "name": "Lalo",
+          "github": "Lalo1821",
+          "role": "Lead Dev"
+        }
+      ],
+      "repo": "",
+      "demo": "",
+      "tech": [
+        "Lightning",
+        "E-commerce",
+        "NWC"
+      ],
+      "status": "building",
+      "submittedAt": "2026-03-24",
+      "pitched_final": "https://www.youtube.com/watch?v=W9Fw72-jFX0&t=3853s"
+    },
+    {
+      "id": "1-sat-to",
+      "name": "1 SAT a...",
+      "description": "Aplicación para visualizar en tiempo real el valor de un Satoshi en FIAT, con gráficos históricos, calculadora y donaciones vía Lightning Network.",
+      "team": [
+        {
+          "name": "Jona",
+          "github": "unllamas",
+          "role": "Dev/Designer"
+        }
+      ],
+      "repo": "https://github.com/unllamas/1-sat-to",
+      "demo": "https://1-sat-to.vercel.app/",
+      "tech": [
+        "React",
+        "Next",
+        "Lightning"
+      ],
+      "status": "building",
+      "submittedAt": "2026-03-17",
+      "pitched_final": "https://www.youtube.com/watch?v=W9Fw72-jFX0&t=3185s"
+    },
+    {
+      "id": "openwork",
+      "name": "openWork",
+      "description": "Contratos entre agentes para intercambiar trabajo por satoshis de Lightning Network.",
+      "team": [
+        {
+          "name": "naranja",
+          "github": "soyezequiel",
+          "role": "Lead Dev"
+        }
+      ],
+      "status": "idea",
+      "submittedAt": "2026-03-17"
+    },
+    {
+      "id": "life-action-plan",
+      "name": "Life Action Plan (LAP)",
+      "description": "Asistente personal offline-first con IA para crear, simular y refinar planes de vida. Micro-pagos por token mediante Lightning Network.",
+      "team": [
+        {
+          "name": "naranja",
+          "github": "soyezequiel",
+          "role": "Lead Dev"
+        }
+      ],
+      "status": "building",
+      "submittedAt": "2026-03-18",
+      "pitched_final": "https://www.youtube.com/watch?v=W9Fw72-jFX0&t=4457s"
+    },
+    {
+      "id": "nosteach",
+      "name": "NosTeach",
+      "description": "Plataforma educativa descentralizada sobre Nostr. Patrocinios Lightning: alumnos pagan, maestros premian, mecenas becan. Todo vía Lightning.",
+      "team": [
+        {
+          "name": "Fred",
+          "github": "fchurca",
+          "role": "Lead Dev"
+        },
+        {
+          "name": "Langostero",
+          "github": "fchurca",
+          "role": "Dev"
+        }
+      ],
+      "repo": "",
+      "demo": "",
+      "tech": [
+        "Alby SDK",
+        "NWC",
+        "Nostr",
+        "Vite"
+      ],
+      "status": "building",
+      "submittedAt": "2026-03-17",
+      "pitched_final": "https://www.youtube.com/watch?v=W9Fw72-jFX0&t=4103s"
     }
   ],
   "_instructions": {
