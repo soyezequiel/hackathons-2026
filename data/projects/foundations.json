@@ -360,7 +360,7 @@
       {
          "id":"nosteach",
          "name":"NosTeach",
-         "description":"Plataforma educativa descentralizada. MVP: Patrocinios Lightning para cursos. Alumnos pagan cursos, maestros premian alumnos, mecenas becan ambos. Todo via Lightning.",
+         "description":"Plataforma educativa descentralizada. MVP: Patrocinios Lightning para cursos. Alumnos pagan cursos, profesores premian alumnos, patrocinadores becan ambos. Todo via Lightning.",
          "team":[
             {
                "name":"Fred",
@@ -373,8 +373,8 @@
                "role":"Dev"
             }
          ],
-         "repo":"",
-         "demo":"",
+         "repo":"https://github.com/fchurca/nosteach",
+         "demo":"https://nosteach.vercel.app/",
          "tech":[
             "Alby SDK",
             "NWC",
