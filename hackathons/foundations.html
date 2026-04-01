@@ -794,16 +794,6 @@ async function loadProjects() {
       'finalist': 'finalist'
     };
     
-    // Filter out Lightning Starter Kit and sort by score descending
-    data.projects = data.projects.filter(p => p.status !== 'official');
-    data.projects.sort((a, b) => {
-      const slugA = (a.repo || '').split('/').pop().replace(/\/$/, '');
-      const slugB = (b.repo || '').split('/').pop().replace(/\/$/, '');
-      const scoreA = finalScores[slugA] || 0;
-      const scoreB = finalScores[slugB] || 0;
-      return scoreB - scoreA;
-    });
-    
     // Final scores by repo slug (multiple case variants for safety)
     const finalScores = {
       'Proof-of-attendance-HDMP': 7.49, 'proof-of-attendance-hdmp': 7.49,
@@ -842,6 +832,14 @@ async function loadProjects() {
       'sweet-shots': 'sweet-shots',
       'lightning-starter': null
     };
+
+    // Filter out Lightning Starter Kit and sort by score descending
+    data.projects = data.projects.filter(p => p.status !== 'official');
+    data.projects.sort((a, b) => {
+      const slugA = (a.repo || '').split('/').pop().replace(/\/$/, '');
+      const slugB = (b.repo || '').split('/').pop().replace(/\/$/, '');
+      return (finalScores[slugB] || 0) - (finalScores[slugA] || 0);
+    });
     
     let html = '<div class="projects-list">';
     data.projects.forEach(project => {
