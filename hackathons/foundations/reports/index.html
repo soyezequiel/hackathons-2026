@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HACKATHON FOUNDATIONS 2026 — Reportes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0a;
+      --bg2: #111111;
+      --bg3: #1a1a1a;
+      --orange: #f7931a;
+      --orange-dim: rgba(247, 147, 26, 0.15);
+      --orange-glow: rgba(247, 147, 26, 0.3);
+      --gray: #94a3b8;
+      --gray-dim: #3f4a5a;
+      --green: #22c55e;
+      --yellow: #eab308;
+      --red: #ef4444;
+      --border: rgba(255, 255, 255, 0.07);
+      --text: #e2e8f0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── HEADER ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(247,147,26,0.05) 0%, transparent 100%);
+    }
+
+    header img.logo {
+      height: 48px;
+      margin-bottom: 1.25rem;
+      opacity: 0.95;
+    }
+
+    header h1 {
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+
+    header h1 span {
+      color: var(--orange);
+    }
+
+    header p.subtitle {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--gray);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── MAIN ── */
+    main {
+      flex: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      width: 100%;
+    }
+
+    .section-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.75rem;
+    }
+
+    /* ── GRID ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    /* ── CARD ── */
+    .card {
+      display: block;
+      text-decoration: none;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      position: relative;
+      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: transparent;
+      transition: background 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: var(--orange);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(247, 147, 26, 0.12);
+    }
+
+    .card:hover::before {
+      background: var(--orange);
+    }
+
+    /* gold/silver/bronze for top 3 */
+    .card[data-rank="1"] .rank-badge { color: #ffd700; }
+    .card[data-rank="2"] .rank-badge { color: #c0c0c0; }
+    .card[data-rank="3"] .rank-badge { color: #cd7f32; }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .rank-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--gray-dim);
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+
+    .score-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 0.3rem 0.65rem;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+
+    .score-green  { background: rgba(34,197,94,0.15);  color: #22c55e; border: 1px solid rgba(34,197,94,0.3); }
+    .score-yellow { background: rgba(234,179,8,0.15);  color: #eab308; border: 1px solid rgba(234,179,8,0.3); }
+    .score-red    { background: rgba(239,68,68,0.15);  color: #ef4444; border: 1px solid rgba(239,68,68,0.3); }
+
+    .card-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .card-team {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--gray);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    footer p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--gray-dim);
+      letter-spacing: 0.03em;
+      line-height: 1.8;
+    }
+
+    footer .btc {
+      color: var(--orange);
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
+      .projects-grid { grid-template-columns: 1fr; }
+      header img.logo { height: 38px; }
+    }
+  
+  .md-rendered { color: var(--text); line-height: 1.7; }
+  .md-rendered h1 { font-size: 2em; font-weight: 900; margin-bottom: 16px; color: #fff; }
+  .md-rendered h2 { font-size: 1.4em; font-weight: 700; color: var(--orange); margin: 32px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .md-rendered h3 { font-size: 1.15em; font-weight: 600; color: #fff; margin: 24px 0 8px; }
+  .md-rendered p { margin: 8px 0; color: var(--gray); }
+  .md-rendered strong { color: #fff; }
+  .md-rendered hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+  .md-rendered ul, .md-rendered ol { padding-left: 24px; color: var(--gray); }
+  .md-rendered li { margin: 4px 0; }
+  .md-rendered table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  .md-rendered th { font-family: "JetBrains Mono", monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); padding: 10px 16px; text-align: left; border-bottom: 1px solid rgba(247,147,26,0.3); }
+  .md-rendered td { padding: 10px 16px; border-bottom: 1px solid var(--border); color: var(--text); font-size: 14px; }
+  .md-rendered tr:hover td { background: rgba(247,147,26,0.04); }
+  .md-rendered blockquote { border-left: 3px solid var(--orange); padding-left: 16px; margin: 16px 0; color: var(--gray); font-style: italic; }
+  .md-rendered code { font-family: "JetBrains Mono", monospace; background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: var(--orange); }
+  .md-rendered em { color: var(--gray); }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="https://raw.githubusercontent.com/lacrypta/branding/main/title/512-white-transparent.png" alt="La Crypta">
+  <h1>HACKATHON <span>FOUNDATIONS</span> 2026</h1>
+  <p class="subtitle">Reportes por Proyecto</p>
+</header>
+
+<main>
+  <p class="section-title">// 15 proyectos · ordenados por score final</p>
+
+  <div class="projects-grid">
+
+    <!-- 1 -->
+    <a class="card" href="proof-of-attendance.md" data-rank="1">
+      <div class="card-top">
+        <span class="rank-badge">#01</span>
+        <span class="score-badge score-yellow">7.49</span>
+      </div>
+      <div class="card-name">Proof of Attendance (HDMP)</div>
+      <div class="card-team">Looker</div>
+    </a>
+
+    <!-- 2 -->
+    <a class="card" href="stacktris.md" data-rank="2">
+      <div class="card-top">
+        <span class="rank-badge">#02</span>
+        <span class="score-badge score-yellow">7.49</span>
+      </div>
+      <div class="card-name">Stacktris</div>
+      <div class="card-team">(equipo)</div>
+    </a>
+
+    <!-- 3 -->
+    <a class="card" href="hash21-shop.md" data-rank="3">
+      <div class="card-top">
+        <span class="rank-badge">#03</span>
+        <span class="score-badge score-yellow">7.07</span>
+      </div>
+      <div class="card-name">Hash21 Shop</div>
+      <div class="card-team">Abstract Lai + Ragnar</div>
+    </a>
+
+    <!-- 4 -->
+    <a class="card" href="1sat.md" data-rank="4">
+      <div class="card-top">
+        <span class="rank-badge">#04</span>
+        <span class="score-badge score-yellow">7.00</span>
+      </div>
+      <div class="card-name">1 SAT a...</div>
+      <div class="card-team">unllamas / Jona</div>
+    </a>
+
+    <!-- 5 -->
+    <a class="card" href="bitbybit.md" data-rank="5">
+      <div class="card-top">
+        <span class="rank-badge">#05</span>
+        <span class="score-badge score-yellow">6.98</span>
+      </div>
+      <div class="card-name">BitByBit</div>
+      <div class="card-team">Anix + Llopo + Wander + Leon</div>
+    </a>
+
+    <!-- 6 -->
+    <a class="card" href="digital-card.md" data-rank="6">
+      <div class="card-top">
+        <span class="rank-badge">#06</span>
+        <span class="score-badge score-yellow">6.83</span>
+      </div>
+      <div class="card-name">Digital Card</div>
+      <div class="card-team">negr0</div>
+    </a>
+
+    <!-- 7 -->
+    <a class="card" href="sweet-shots.md" data-rank="7">
+      <div class="card-top">
+        <span class="rank-badge">#07</span>
+        <span class="score-badge score-yellow">6.58</span>
+      </div>
+      <div class="card-name">Sweet Shots</div>
+      <div class="card-team">Lalo</div>
+    </a>
+
+    <!-- 8 -->
+    <a class="card" href="satlotto-v2.md" data-rank="8">
+      <div class="card-top">
+        <span class="rank-badge">#08</span>
+        <span class="score-badge score-yellow">6.37</span>
+      </div>
+      <div class="card-name">SatLotto V2</div>
+      <div class="card-team">Fierillo</div>
+    </a>
+
+    <!-- 9 -->
+    <a class="card" href="wapu-cli.md" data-rank="9">
+      <div class="card-top">
+        <span class="rank-badge">#09</span>
+        <span class="score-badge score-yellow">6.28</span>
+      </div>
+      <div class="card-name">Wapu CLI</div>
+      <div class="card-team">AndyCreed</div>
+    </a>
+
+    <!-- 10 -->
+    <a class="card" href="streamsats.md" data-rank="10">
+      <div class="card-top">
+        <span class="rank-badge">#10</span>
+        <span class="score-badge score-yellow">6.17</span>
+      </div>
+      <div class="card-name">Streamsats</div>
+      <div class="card-team">Federico</div>
+    </a>
+
+    <!-- 11 -->
+    <a class="card" href="relampago.md" data-rank="11">
+      <div class="card-top">
+        <span class="rank-badge">#11</span>
+        <span class="score-badge score-yellow">5.92</span>
+      </div>
+      <div class="card-name">RelámPago</div>
+      <div class="card-team">Burgos</div>
+    </a>
+
+    <!-- 12 -->
+    <a class="card" href="anirayo.md" data-rank="12">
+      <div class="card-top">
+        <span class="rank-badge">#12</span>
+        <span class="score-badge score-yellow">5.85</span>
+      </div>
+      <div class="card-name">AniRayo</div>
+      <div class="card-team">CapitanDelEscabio</div>
+    </a>
+
+    <!-- 13 -->
+    <a class="card" href="satsparty.md" data-rank="13">
+      <div class="card-top">
+        <span class="rank-badge">#13</span>
+        <span class="score-badge score-red">5.42</span>
+      </div>
+      <div class="card-name">SatsParty</div>
+      <div class="card-team">Cyberpunk</div>
+    </a>
+
+    <!-- 14 -->
+    <a class="card" href="nosteach.md" data-rank="14">
+      <div class="card-top">
+        <span class="rank-badge">#14</span>
+        <span class="score-badge score-red">5.00</span>
+      </div>
+      <div class="card-name">NosTeach</div>
+      <div class="card-team">Fred + Langostero</div>
+    </a>
+
+    <!-- 15 -->
+    <a class="card" href="life-action-plan.md" data-rank="15">
+      <div class="card-top">
+        <span class="rank-badge">#15</span>
+        <span class="score-badge score-red">4.83</span>
+      </div>
+      <div class="card-name">Life Action Plan</div>
+      <div class="card-team">naranja</div>
+    </a>
+
+  </div>
+</main>
+
+<footer>
+  <p>Evaluado por 3 jueces AI: Claudio (Claude Opus 4.6) · Gorilatron (OpenAI Codex 5.4) · Gorilator (Claude Opus 4.6)</p>
+  <p class="btc">Bitcoin o Muerte. 💀</p>
+</footer>
+
+
+<div id="md-overlay" style="display:none;position:fixed;inset:0;background:var(--bg);z-index:1000;overflow-y:auto;">
+  <div style="max-width:1000px;margin:0 auto;padding:40px 24px;">
+    <a href="#" onclick="closeMd();return false" style="display:inline-flex;align-items:center;gap:8px;color:var(--orange);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:14px;margin-bottom:32px;">← Volver al índice</a>
+    <div id="md-content" class="md-rendered"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+async function openReport(mdFile) {
+  try {
+    const res = await fetch(mdFile);
+    if (!res.ok) { alert('Reporte no disponible aún'); return; }
+    const md = await res.text();
+    document.getElementById('md-content').innerHTML = marked.parse(md);
+    document.getElementById('md-overlay').style.display = 'block';
+    document.getElementById('md-overlay').scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+  } catch(e) { alert('Reporte no disponible aún'); }
+}
+
+function closeMd() {
+  document.getElementById('md-overlay').style.display = 'none';
+  document.body.style.overflow = '';
+  history.pushState(null, '', window.location.pathname);
+}
+
+document.querySelectorAll('a.card').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const mdFile = a.getAttribute('href');
+    const name = mdFile.replace('.md', '');
+    history.pushState({ report: mdFile }, '', '?report=' + name);
+    openReport(mdFile);
+  });
+});
+
+// Handle back/forward
+window.addEventListener('popstate', e => {
+  if (e.state && e.state.report) {
+    openReport(e.state.report);
+  } else {
+    closeMd();
+  }
+});
+
+// Handle direct URL with ?report=
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const report = params.get('report');
+  if (report) openReport(report + '.md');
+})();
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMd(); });
+</script>
+
+</body>
+</html>
