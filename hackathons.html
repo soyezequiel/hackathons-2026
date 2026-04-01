@@ -83,6 +83,42 @@
 .hackathon-row.upcoming:hover {
   opacity: 1;
 }
+.hackathon-row.completed {
+  border-color: rgba(255,255,255,0.15);
+  background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+}
+.hackathon-row.completed::before {
+  content: '✅ TERMINADA';
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.7);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.hackathon-row.next {
+  border-color: #ffc800;
+  background: linear-gradient(135deg, rgba(255,200,0,0.08) 0%, rgba(255,200,0,0.02) 100%);
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 200, 0, 0.15);
+}
+.hackathon-row.next::before {
+  content: '🔜 PRÓXIMA';
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #ffc800;
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 .hackathon-row.disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -267,8 +303,8 @@
   <div class="container">
     <div class="hackathons-list">
       
-      <!-- #1 FOUNDATIONS - ACTIVE -->
-      <a href="hackathons/foundations.html" class="hackathon-row active">
+      <!-- #1 FOUNDATIONS - COMPLETED -->
+      <a href="hackathons/foundations.html" class="hackathon-row completed">
         <div class="hackathon-month">
           <span class="month-name">MAR</span>
           <span class="month-icon">⚡</span>
@@ -277,7 +313,7 @@
           <h3>#1 FOUNDATIONS</h3>
           <p class="focus">Lightning Payments Basics</p>
           <div class="tags">
-            <span class="tag active-tag">🟢 Inscripciones abiertas</span>
+            <span class="tag">✅ Terminada</span>
             <span class="tag">⭐ Beginner</span>
             <span class="tag">Lightning</span>
           </div>
@@ -285,12 +321,12 @@
         <div class="hackathon-prize">
           <div class="prize-amount">1,000,000</div>
           <div class="prize-unit">sats</div>
-          <div class="prize-cta">Ver detalles →</div>
+          <div class="prize-cta">Ver resultados →</div>
         </div>
       </a>
       
-      <!-- #2 IDENTITY -->
-      <div class="hackathon-row disabled">
+      <!-- #2 IDENTITY - NEXT -->
+      <a href="hackathons/identity.html" class="hackathon-row next">
         <div class="hackathon-month">
           <span class="month-name">ABR</span>
           <span class="month-icon">🔐</span>
@@ -299,7 +335,7 @@
           <h3>#2 IDENTITY</h3>
           <p class="focus">Nostr Identity & Social</p>
           <div class="tags">
-            <span class="tag wip-tag">🚧 En construcción</span>
+            <span class="tag active-tag">🔜 Próxima</span>
             <span class="tag">⭐ Beginner</span>
             <span class="tag">Nostr</span>
           </div>
@@ -307,8 +343,9 @@
         <div class="hackathon-prize">
           <div class="prize-amount">1,000,000</div>
           <div class="prize-unit">sats</div>
+          <div class="prize-cta">Ver detalles →</div>
         </div>
-      </div>
+      </a>
       
       <!-- #3 ZAPS -->
       <div class="hackathon-row disabled">
