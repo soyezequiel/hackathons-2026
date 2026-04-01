@@ -11,7 +11,7 @@
 <style>
   .projects-list { display: flex; flex-direction: column; gap: 8px; width: 100%; }
   .project-list-item {
-    display: grid; grid-template-columns: 120px 1fr auto; align-items: center; gap: 16px;
+    display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 16px;
     padding: 16px 24px; border-radius: 10px; width: 100%;
     background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
     transition: all 0.2s;
@@ -800,7 +800,6 @@ async function loadProjects() {
       
       html += `
         <div class="project-list-item">
-          <span class="project-list-status">${statusLabel}</span>
           <div class="project-list-info">
             <a href="${repoUrl}" target="_blank" class="project-list-name">${project.name}</a>
             <span class="project-list-team">${teamNames}</span>
