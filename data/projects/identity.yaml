@@ -105,7 +105,7 @@ projects:
         role: Lead Dev
       - name: Wander
         github: Pizza-Wder
-        role: UX
+        role: Designer
     repo: https://github.com/bitbybit-ar/bitbybit-arena
     demo: "https://arena.bitbybit.com.ar"
     tech:
